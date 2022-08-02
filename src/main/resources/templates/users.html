@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<fieldset th:each="user:${users}">
+    <legend>User</legend>
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" id="firstName" th:value="${user.firstName}" disabled>
+    <br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" id="lastName" th:value="${user.lastName}" disabled>
+    <br>
+    <label for="age">Age:</label>
+    <input type="text" name="age" id="age" th:value="${user.age}" disabled>
+    <br>
+    <label for="username">Username:</label>
+    <input  type="text" name="username" id="username" th:value="${user.username}" disabled>
+    <br>
+</fieldset>
+</body>
+</html>
